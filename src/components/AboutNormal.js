@@ -1,7 +1,5 @@
 import React from "react"
 
-import wave from "../../public/images/wave.png"
-
 
 export default class AboutNormal extends React.Component {
     render() {
