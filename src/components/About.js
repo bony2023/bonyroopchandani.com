@@ -65,11 +65,7 @@ export default class About extends React.Component {
         if (this.state.isSmallScreen) {
             icon = null
         }
-
-        let terminalIcon = !this.state.isTerminalSelected ? (
-            <FontAwesomeIcon onClick={this.selectTerminal.bind(this)} className="terminal" icon="terminal" />
-        ) : null
-
+        
         let content = this.state.isTerminalSelected ? <Console/> : <AboutNormal/>
 
         return (

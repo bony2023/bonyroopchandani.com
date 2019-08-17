@@ -1,11 +1,22 @@
-$header-color: #333333;
-$header-bg-color: #FAFAFA;
 $header-height: 100px;
 
-$about-bg-color: #FAFAFA;
+$light-bg: #FAFAFA;
+$light-color: #F1F3F4;
+$dark-bg: #323639;
+$dark-color: #333333;
 
-$experience-bg-color: #3F65A0;
+$light-theme-bg: $light-bg;
+$light-theme-color: $dark-color;
+$dark-theme-bg: $dark-bg;
+$dark-theme-color: $light-color;
 
-$work-bg-color: #EEEEEE;
+$console-theme-bg-color: #D8D8D8;
+$console-theme-bg-color-dark: #202124;
+
+$experience-theme-bg-color: #3F65A0;
+$experience-theme-bg-color-dark: #202124;
+
+$work-theme-bg-color: #EEEEEE;
+$work-theme-bg-color-dark: #282C2F;
 
 $footer-height: 70px;
