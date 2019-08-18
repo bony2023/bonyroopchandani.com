@@ -26,10 +26,13 @@ export default class Header extends React.Component {
 
 Header.defaultProps = {
     navItems: [{
-        "label": "Experience",
+        "label": "Exp",
         "link": "#experience"
     }, {
         "label": "Work",
         "link": "#work"
+    }, {
+        "label": "Resume",
+        "link": "public/static/resume.pdf"
     }]
 }

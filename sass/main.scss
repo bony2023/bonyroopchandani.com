@@ -115,6 +115,7 @@ html, body {
         line-height: $header-height;
         font-family: 'Montserrat', sans-serif;
         font-size: 16px;
+        font-weight: 600;
         letter-spacing: 0.2em;
         text-transform: uppercase;
         -webkit-font-smoothing: antialiased;
@@ -226,7 +227,6 @@ html, body {
                     font-size: 18px;
                     line-height: 22px;
                     white-space: nowrap;
-                    // @extend .bold;
 
                     br {
                         display:none;
@@ -355,16 +355,21 @@ html, body {
             }
 
             .wave-hand {
-                width: 36px;
-                height: 36px;
-                margin: 4px;
+                animation-name: wave-animation;
+                animation-duration: 2s;
+                animation-delay: 0.5s;
+                animation-iteration-count: 1;
+                transform-origin: 70% 70%;
                 display: inline-block;
-                background-size: contain;
-                vertical-align: text-top;
 
-                @media (max-width: 420px) {
-                    width: 32px;
-                    height: 32px;
+                @keyframes wave-animation {
+                    0% { transform: rotate(  0.0deg) }
+                   10% { transform: rotate(-10.0deg) }
+                   20% { transform: rotate( 12.0deg) }
+                   30% { transform: rotate(-10.0deg) }
+                   40% { transform: rotate(  9.0deg) }
+                   50% { transform: rotate(  0.0deg) }
+                  100% { transform: rotate(  0.0deg) }
                 }
             }
         }
@@ -440,8 +445,22 @@ html, body {
             background: t('work-background');
         }
 
+        .content {
+            width: 100%;
+
+            @media (max-width: 656px) {
+                width: 80%;
+            }
+        }
+
+        .swiper-pagination {
+            height: 20px;
+            position: relative;
+            bottom: -12px;
+        }
+
         .portfolio-box {
-            width: 41%;
+            width: 25%;
             margin: 20px;
             border-radius: 5px;
             display: inline-block;

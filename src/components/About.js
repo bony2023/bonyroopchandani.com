@@ -1,6 +1,6 @@
 import React from "react"
 
-import Console from "./Console"
+import AboutConsole from "./AboutConsole"
 import AboutNormal from "./AboutNormal"
 
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -66,7 +66,7 @@ export default class About extends React.Component {
             icon = null
         }
         
-        let content = this.state.isTerminalSelected ? <Console/> : <AboutNormal/>
+        let content = this.state.isTerminalSelected ? <AboutConsole/> : <AboutNormal/>
 
         return (
             <div id="about">

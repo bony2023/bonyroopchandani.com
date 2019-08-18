@@ -14,7 +14,6 @@ export default class Work extends React.Component {
     constructor(props) {
         super(props)
         this.swiperParams = {
-            effect: 'coverflow',
             grabCursor: true,
             centeredSlides: true,
             slidesPerView: 'auto',
@@ -28,6 +27,7 @@ export default class Work extends React.Component {
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
+                dynamicBullets: true
             },
             autoplay: {
                 delay: 3000,

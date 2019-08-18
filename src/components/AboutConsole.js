@@ -6,7 +6,7 @@ import { connect } from "react-redux"
 import actions from "../redux/actions"
 
 
-class Console extends React.Component {
+class AboutConsole extends React.Component {
     constructor(props) {
         super(props)
         this.editContainer = React.createRef()
@@ -295,4 +295,4 @@ class Console extends React.Component {
 
 export default connect(
     (state) => state
-)(Console)
+)(AboutConsole)
