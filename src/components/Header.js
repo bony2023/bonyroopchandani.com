@@ -1,38 +1,36 @@
 import React from "react"
 
 
-export default class Header extends React.Component {
-
-    render () {
-        let navigation = this.props.navItems.map((navItem, index) => {
-            return (
-                <li key={index}>
-                    <a href={navItem.link}>{navItem.label}</a>
-                </li>
-            )
-        })
+export default function Header(props) {
+    let navigation = props.navItems.map((navItem, index) => {
         return (
-            <header>
-                <div>
-                    <a href="/"></a>
-                </div>
-                <ul>
-                    {navigation}
-                </ul>
-            </header>
+            <li key={index}>
+                <a {...navItem}>{navItem.label}</a>
+            </li>
         )
-    }
+    })
+    return (
+        <header>
+            <div>
+                <a href="/"></a>
+            </div>
+            <ul>
+                {navigation}
+            </ul>
+        </header>
+    )
 }
 
 Header.defaultProps = {
     navItems: [{
-        "label": "Exp",
-        "link": "#experience"
+        label: "Exp",
+        href: "#experience"
     }, {
-        "label": "Work",
-        "link": "#work"
+        label: "Work",
+        href: "#work"
     }, {
-        "label": "Resume",
-        "link": "public/static/resume.pdf"
+        label: "Resume",
+        href: "public/static/resume.pdf",
+        target: "_blank"
     }]
 }

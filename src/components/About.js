@@ -1,78 +1,49 @@
-import React from "react"
+import React, { useState, useCallback, useEffect, } from "react"
 
-import AboutConsole from "./AboutConsole"
 import AboutNormal from "./AboutNormal"
+import AboutConsole from "./AboutConsole"
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faQuestion, faTerminal } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faQuestion, faTerminal } from '@fortawesome/free-solid-svg-icons'
 
 
-library.add(faQuestion)
-library.add(faTerminal)
+export default function About(props) {
+    const [isTerminalSelected, setIsTerminalSelected] = useState(false)
+    const [isSmallScreen, setIsSmallScreen] = useState(false)
+    const handWindowResize = useCallback(initializeState, [])
 
+    useEffect(() => {
+        initializeState()
+    }, [])
 
-export default class About extends React.Component {
-
-    constructor(props) {
-        super(props)
-        this.state = {
-            isTerminalSelected: false,
-            isSmallScreen: false
+    useEffect(() => {
+        window.addEventListener('resize', handWindowResize, false)
+        return () => {
+            window.removeEventListener('resize')
         }
+    }, [handWindowResize]);
+
+    function initializeState() {
+        setIsTerminalSelected(!isTerminalSelected ? false : window.outerWidth > 800)
+        setIsSmallScreen(window.outerWidth <= 800)
     }
 
-    initializeState() {
-        this.setState((prevState) => {
-            return {
-                isTerminalSelected: !prevState.isTerminalSelected ? false : window.outerWidth > 800,
-                isSmallScreen: window.outerWidth <= 800
-            }
-        });
+    let icon = isTerminalSelected ? (
+        <FontAwesomeIcon onClick={() => setIsTerminalSelected(false)} className="normal" icon={faQuestion} />
+    ) : (
+        <FontAwesomeIcon onClick={() => setIsTerminalSelected(true)} className="terminal" icon={faTerminal} />
+    )
+
+    if (isSmallScreen) {
+        icon = null
     }
+    
+    const content = !isTerminalSelected ? <AboutNormal/> : <AboutConsole/>
 
-    componentDidMount() {
-        this.initializeState()
-
-        window.addEventListener('resize', () => {
-            this.initializeState()
-        }, false);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('resize')
-    }
-
-    selectNormal() {
-        this.setState({
-            isTerminalSelected: false
-        })
-    }
-
-    selectTerminal() {
-        this.setState({
-            isTerminalSelected: true
-        })
-    }
-
-    render() {
-        let icon = this.state.isTerminalSelected ? (
-            <FontAwesomeIcon onClick={this.selectNormal.bind(this)} className="normal" icon="question" />
-        ) : (
-            <FontAwesomeIcon onClick={this.selectTerminal.bind(this)} className="terminal" icon="terminal" />
-        )
-
-        if (this.state.isSmallScreen) {
-            icon = null
-        }
-        
-        let content = this.state.isTerminalSelected ? <AboutConsole/> : <AboutNormal/>
-
-        return (
-            <div id="about">
-                {content}
-                {icon}
-            </div>
-        )
-    }
+    return (
+        <div id="about">
+            {content}
+            {icon}
+        </div>
+    )
 }

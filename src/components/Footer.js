@@ -1,25 +1,22 @@
 import React from "react"
 
 
-export default class Footer extends React.Component {
-
-    render() {
-        let contactLinks = this.props.contactLinks.map((contactLink, index) => {
-            return (
-                <li key={index}>
-                    <a target="_blank" href={contactLink.link}>{contactLink.label}</a>
-                </li>
-            )
-        })
-
+export default function Footer(props) {
+    let contactLinks = props.contactLinks.map((contactLink, index) => {
         return (
-            <footer>
-                <ul>
-                    {contactLinks}
-                </ul>
-            </footer>
+            <li key={index}>
+                <a target="_blank" href={contactLink.link}>{contactLink.label}</a>
+            </li>
         )
-    }
+    })
+
+    return (
+        <footer>
+            <ul>
+                {contactLinks}
+            </ul>
+        </footer>
+    )
 }
 
 Footer.defaultProps = {

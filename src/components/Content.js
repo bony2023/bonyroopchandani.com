@@ -5,14 +5,12 @@ import Experience from "./Experience"
 import Work from "./Work"
 
 
-export default class Content extends React.Component {
-    render() {
-        return (
-            <div>
-                <About/>
-                <Experience/>
-                <Work/>
-            </div>
-        )
-    }
+export default function Content(props) {
+    return (
+        <div>
+            <About/>
+            <Experience/>
+            <Work/>
+        </div>
+    )
 }

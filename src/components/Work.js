@@ -10,55 +10,29 @@ import bettinza from "../../public/images/bettinza.svg"
 import git from "../../public/images/git.svg"
 
 
-export default class Work extends React.Component {
-    constructor(props) {
-        super(props)
-        this.swiperParams = {
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            coverflowEffect: {
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-                dynamicBullets: true
-            },
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: true
-            },
-        }
-    }
-    render() {
-        let myWork = this.props.myWork.map((work, index) => {
-            return (
-                <div key={index} className="portfolio-box">
-                    <a target="_blank" href={work.link}><img src={work.banner}/></a>
-                    <p>
-                        <span className="project-title">{work.title}</span>
-                        <span>{work.description}</span>
-                    </p>
-                </div>
-            )
-        })
-
+export default function Work(props) {
+    let myWork = props.myWork.map((work, index) => {
         return (
-            <div id="work">
-                <div className="head">My Work</div>
-                <div className="content">
-                    <Swiper {...this.swiperParams}>
-                        {myWork}
-                    </Swiper>
-                </div>
+            <div key={index} className="portfolio-box">
+                <a target="_blank" href={work.link}><img src={work.banner}/></a>
+                <p>
+                    <span className="project-title">{work.title}</span>
+                    <span>{work.description}</span>
+                </p>
             </div>
         )
-    }
+    })
+
+    return (
+        <div id="work">
+            <div className="head">My Work</div>
+            <div className="content">
+                <Swiper {...props.swiperParams}>
+                    {myWork}
+                </Swiper>
+            </div>
+        </div>
+    )
 }
 
 Work.defaultProps = {
@@ -92,5 +66,26 @@ Work.defaultProps = {
         banner: git,
         link: "https://github.com/bony2023/",
         description: ""
-    }]
+    }],
+    swiperParams: {
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: true
+        },
+    }
 }

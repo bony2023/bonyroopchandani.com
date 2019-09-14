@@ -6,44 +6,42 @@ import loktra from "../../public/images/loktra.png"
 import appperfect from "../../public/images/appperfect.png"
 
 
-export default class Experience extends React.Component {
-    render() {
-        let workExperience = this.props.workExperience.map((experience, index) => {
-            let skills = experience.skills.map((skill, index) => {
-                return <span key={index}>{skill}</span>
-            })
-            return (
-                <div key={index}>
-                    <div className="exp-head">
-                        <div>
-                            <a target="_blank" href={experience.website}><img src={experience.logo}/></a>
-                            <span className="bold lg-text">{experience.companyName}</span>
-                            <span style={{float: "right"}} className="exp-det italic">{experience.duration}</span>
-                        </div>
-                        <div>
-                            <span className="bold">{experience.position}</span>
-                            <span style={{float: "right"}} className="exp-det italic">{experience.location}</span>
-                        </div>
+export default function Experience(props) {
+    let workExperience = props.workExperience.map((experience, index) => {
+        let skills = experience.skills.map((skill, index) => {
+            return <span key={index}>{skill}</span>
+        })
+        return (
+            <div key={index}>
+                <div className="exp-head">
+                    <div>
+                        <a target="_blank" href={experience.website}><img src={experience.logo}/></a>
+                        <span className="bold lg-text">{experience.companyName}</span>
+                        <span style={{float: "right"}} className="exp-det italic">{experience.duration}</span>
                     </div>
-                    <div className="exp-work">
-                        {experience.work}
-                    </div>
-                    <div className="skills">
-                        {skills}
+                    <div>
+                        <span className="bold">{experience.position}</span>
+                        <span style={{float: "right"}} className="exp-det italic">{experience.location}</span>
                     </div>
                 </div>
-            )
-        })
-
-        return (
-            <div id="experience">
-                <div className="head">Experience</div>
-                <div className="content">
-                    {workExperience}
+                <div className="exp-work">
+                    {experience.work}
+                </div>
+                <div className="skills">
+                    {skills}
                 </div>
             </div>
         )
-    }
+    })
+
+    return (
+        <div id="experience">
+            <div className="head">Experience</div>
+            <div className="content">
+                {workExperience}
+            </div>
+        </div>
+    )
 }
 
 Experience.defaultProps = {
