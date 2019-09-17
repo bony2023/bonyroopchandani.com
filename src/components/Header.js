@@ -23,11 +23,12 @@ export default function Header(props) {
 
 Header.defaultProps = {
     navItems: [{
-        label: "Exp",
-        href: "#experience"
-    }, {
         label: "Work",
         href: "#work"
+    }, {
+        label: "Blog",
+        href: "https://medium.com/@bonyroopchandani",
+        target: "_blank"
     }, {
         label: "Resume",
         href: "public/static/resume.pdf",

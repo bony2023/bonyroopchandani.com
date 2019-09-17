@@ -40,12 +40,12 @@ Work.defaultProps = {
         title: "Yazlo",
         banner: yazlo,
         link: "https://yazlo.herokuapp.com/",
-        description: "A Database Storage Platform for managing / accessing databases through REST API, developed in Django."
+        description: "A Database Storage Platform for managing/accessing databases through REST API, developed in Django."
     }, {
         title: "Bettinza",
         banner: bettinza,
         link: "https://bettinza.herokuapp.com/",
-        description: "Simple betting game, built using HTML5 Canvas and ReactJS."
+        description: "A simple betting game, built using HTML5 Canvas and ReactJS."
     }, {
         title: "TutoSchedule",
         banner: tutoschedule,
@@ -55,12 +55,12 @@ Work.defaultProps = {
         title: "ChatIO",
         banner: chatio,
         link: "http://flasksocketiochat.herokuapp.com/",
-        description: "A chatting web application developed on Flask and SocketIO, provides group and anonymous chat."
+        description: "A chatting web application developed on Flask and SocketIO provides group and anonymous chat."
     }, {
         title: "iBackup",
         banner: ibackup,
         link: "http://ibackup.herokuapp.com/",
-        description: "A small and simple application that backups Instagram’s data of a user by accessing Instagram’s REST API"
+        description: "A small and simple application that backups Instagram’s data of a user by accessing Instagram’s REST API."
     }, {
         title: "More on Git",
         banner: git,

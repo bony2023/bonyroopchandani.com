@@ -50,7 +50,7 @@ Experience.defaultProps = {
         logo: hiver,
         website: "https://hiverhq.com/",
         position: "Senior Software Engineer",
-        work: "Hiver is a shared mailbox management over Gmail. Working on building the infrastructure on the backend as well as architecting and incorporating features.",
+        work: "Hiver has shared mailbox management over Gmail. Working on building the infrastructure on the backend as well as architecting and incorporating features.",
         skills: ["Python", "MySQL"],
         duration: "May 2019 - Present",
         location: "Bengaluru, India"
@@ -77,7 +77,7 @@ Experience.defaultProps = {
         logo: appperfect,
         website: "http://www.appperfect.com/",
         position: "Software Engineer",
-        work: "Experience developing comprehensive set of testing and monitoring software products for Web and Desktop / Mobile applications.",
+        work: "Experience developing a comprehensive set of testing and monitoring software products for Web and Desktop / Mobile applications.",
         skills: ["Java", "PHP", "JavaScript"],
         duration: "Feb 2016 - Nov 2016",
         location: "Udaipur, India"
