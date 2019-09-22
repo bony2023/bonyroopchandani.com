@@ -10,6 +10,7 @@ import { faQuestion, faTerminal } from '@fortawesome/free-solid-svg-icons'
 export default function About(props) {
     const [isTerminalSelected, setIsTerminalSelected] = useState(false)
     const [isSmallScreen, setIsSmallScreen] = useState(false)
+    const [iconAnimationPlayState, setIconAnimationPlayState] = useState("running")
     const handWindowResize = useCallback(initializeState, [])
 
     useEffect(() => {
@@ -29,9 +30,15 @@ export default function About(props) {
     }
 
     let icon = isTerminalSelected ? (
-        <FontAwesomeIcon onClick={() => setIsTerminalSelected(false)} className="normal" icon={faQuestion} />
+        <FontAwesomeIcon onClick={() => {
+            setIsTerminalSelected(false)
+            setIconAnimationPlayState("paused")
+        }} className={`normal ${iconAnimationPlayState}`} icon={faQuestion} />
     ) : (
-        <FontAwesomeIcon onClick={() => setIsTerminalSelected(true)} className="terminal" icon={faTerminal} />
+        <FontAwesomeIcon onClick={() => {
+            setIsTerminalSelected(true)
+            setIconAnimationPlayState("paused")
+        }} className={`terminal ${iconAnimationPlayState}`} icon={faTerminal} />
     )
 
     if (isSmallScreen) {
