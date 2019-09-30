@@ -51,7 +51,7 @@ Experience.defaultProps = {
         website: "https://hiverhq.com/",
         position: "Senior Software Engineer",
         work: "Hiver has shared mailbox management over Gmail. Working on building the infrastructure on the backend as well as architecting and incorporating features.",
-        skills: ["Python", "MySQL"],
+        skills: ["Python", "MySQL", "React"],
         duration: "May 2019 - Present",
         location: "Bengaluru, India"
     },{
