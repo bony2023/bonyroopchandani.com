@@ -60,7 +60,7 @@ Experience.defaultProps = {
         website: "https://www.datalicious.com/",
         position: "Full Stack Developer",
         work: "Working on a marketing attribution product which aims at providing better customer journey analytics based on a custom data science model.",
-        skills: ["Python", "PostgreSQL", "React", "Redux", "D3"],
+        skills: ["Python", "PostgreSQL", "React-Redux", "D3"],
         duration: "June 2017 - April 2019",
         location: "Bengaluru, India"
     }, {

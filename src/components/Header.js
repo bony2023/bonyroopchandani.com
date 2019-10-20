@@ -1,4 +1,5 @@
 import React from "react"
+import Switch from "./Switch"
 
 
 export default function Header(props) {
@@ -11,7 +12,7 @@ export default function Header(props) {
     })
     return (
         <header>
-            <div>
+            <div className="nav-index">
                 <a href="/"></a>
             </div>
             <ul>
@@ -23,6 +24,9 @@ export default function Header(props) {
 
 Header.defaultProps = {
     navItems: [{
+        label: "Exp",
+        href: "#experience"
+    }, {
         label: "Work",
         href: "#work"
     }, {

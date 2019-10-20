@@ -9,23 +9,19 @@ import { faQuestion, faTerminal } from '@fortawesome/free-solid-svg-icons'
 
 export default function About(props) {
     const [isTerminalSelected, setIsTerminalSelected] = useState(false)
-    const [isSmallScreen, setIsSmallScreen] = useState(false)
+    const [isSmallScreen, setIsSmallScreen] = useState(true)
     const [iconAnimationPlayState, setIconAnimationPlayState] = useState("running")
-    const handWindowResize = useCallback(initializeState, [])
 
     useEffect(() => {
         initializeState()
-    }, [])
-
-    useEffect(() => {
-        window.addEventListener('resize', handWindowResize, false)
         return () => {
             window.removeEventListener('resize')
         }
-    }, [handWindowResize]);
+    }, [])
 
     function initializeState() {
-        setIsTerminalSelected(!isTerminalSelected ? false : window.outerWidth > 800)
+        window.addEventListener('resize', initializeState, false)
+        setIsTerminalSelected(isTerminalSelected => !isTerminalSelected ? false : window.outerWidth > 800)
         setIsSmallScreen(window.outerWidth <= 800)
     }
 

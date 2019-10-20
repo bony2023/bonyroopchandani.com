@@ -16,7 +16,7 @@ export default function Work(props) {
             <div key={index} className="portfolio-box">
                 <a target="_blank" href={work.link}><img src={work.banner}/></a>
                 <p>
-                    <span className="project-title">{work.title}</span>
+                    <span className="project-title lg-text">{work.title}</span>
                     <span>{work.description}</span>
                 </p>
             </div>

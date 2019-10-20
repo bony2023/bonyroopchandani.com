@@ -33,10 +33,9 @@
     .head {
         width: 100%;
         height: 20px;
-        font-family: 'Open Sans', sans-serif;
         text-transform: uppercase;
         text-align: center;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 600;
         letter-spacing: 4px;
         margin-bottom: 30px;
@@ -50,7 +49,6 @@
         min-height: 360px;
         width: 800px;
         font-size: 18px;
-        font-family: 'Karla', sans-serif;
         letter-spacing: 1px;
         margin: auto;
 
@@ -60,7 +58,7 @@
 
         @media (max-width: 420px) {
             width: 350px;
-            font-size: 14px;
+            font-size: 16px;
         }
 
         @media (max-width: 656px) and (min-width: 421px) {
@@ -105,6 +103,8 @@ html, body {
     #root, .wrapper {
         width: 100%;
         height: 100%;
+        font-family: 'Nunito Sans', sans-serif;
+        -webkit-font-smoothing: antialiased;
     }
 }
 
@@ -113,7 +113,6 @@ html, body {
         width: 100%;
         height: $header-height;
         line-height: $header-height;
-        font-family: 'Montserrat', sans-serif;
         font-size: 16px;
         font-weight: 600;
         letter-spacing: 0.2em;
@@ -126,11 +125,11 @@ html, body {
         }
 
         @media (max-width: 656px) {
-            font-size: 14px;
+            font-size: 16px;
         }
 
         @media (max-width: 420px) {
-            font-size: 12px;
+            font-size: 14px;
             height: 70px;
             line-height: 70px;
         }
@@ -138,7 +137,7 @@ html, body {
         @include non-decorated-anchor;
         @include non-decorated-ul;
 
-        div {
+        .nav-index {
             float: left;
             margin-left: 128px;
             @media (max-width: 959px) {
@@ -147,13 +146,13 @@ html, body {
 
             @media (max-width: 656px) {
                 margin-left: 28px;
-                font-size: 14px;
+                font-size: 16px;
             }
 
             a::before {
                 content: "Bony Roopchandani";
                 @media (max-width: 1023px) {
-                    content: "BR"
+                    content: ""
                 }
             }
         }
@@ -162,6 +161,11 @@ html, body {
             float: right;
             li {
                 margin: 0 15px;
+
+                #switch {
+                    position: relative;
+                    top: 10px;
+                }
             }
         }
     }
@@ -239,7 +243,6 @@ html, body {
                     outline: none;
                     border: none;
                     background: inherit;
-                    font-family: 'Source Code Pro', monospace;
                     color: transparent;
                     text-shadow: 0 0 0 rgb(130, 147, 139);
                     font-size: 18px;
@@ -343,7 +346,6 @@ html, body {
             height: 320px;
             width: 800px;
             margin: auto;
-            font-family: 'Karla', sans-serif;
             font-size: 40px;
             letter-spacing: 1px;
             
@@ -446,6 +448,7 @@ html, body {
             margin-top: 30px;
 
             span {
+                font-size: 14px;
                 border: 1px solid;
                 border-radius: 3px;
                 padding: 3px;
@@ -479,7 +482,7 @@ html, body {
 
         .portfolio-box {
             width: 25%;
-            height: 530px;
+            height: 570px;
             margin: 20px;
             border-radius: 5px;
             display: inline-block;
@@ -508,8 +511,7 @@ html, body {
         width: 100%;
         height: $footer-height;
         line-height: $footer-height;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 12px;
+        font-size: 14px;
         letter-spacing: 0.1em;
         text-align: center;
         -webkit-font-smoothing: antialiased;
@@ -529,4 +531,73 @@ html, body {
             }
         }
     }
+}
+
+.switch-toggle {
+	display: none;
+	&, &:after, &:before, & *, & *:after, & *:before, & + .switch-btn {
+		box-sizing: border-box;
+		&::selection {
+			background: none;
+		}
+	}
+  
+	+ .switch-btn {
+		outline: 0;
+		display: block;
+		width: 3.5em;
+		height: 2em;
+		position: relative;
+		cursor: pointer;
+        user-select: none;
+		&:after, &:before {
+			position: relative;
+			display: block;
+			content: "";
+			width: 50%;
+			height: 100%;
+		}
+    
+		&:after {
+			left: 0;
+		}
+    
+		&:before {
+			display: none;
+		}
+	}
+  
+	&:checked + .switch-btn:after {
+		left: 50%;
+	}
+}
+
+.switch-toggle {
+	+ .switch-btn {
+		padding: 3px;
+		transition: all .2s ease;
+        border-radius: 2em;
+        
+        @include themed() {
+            background: t('background');
+            border: 4px solid t('color');
+        }
+
+		&:after {
+			transition: all .2s ease;
+			background: $dark-theme-color;
+			content: "";
+            border-radius: 3em;
+            
+            @include themed() {
+                background: t('color');
+            }
+		}
+	}
+  
+	&:checked + .switch-btn {
+    &:after {
+        left: 50%;
+    }
+  }
 }
