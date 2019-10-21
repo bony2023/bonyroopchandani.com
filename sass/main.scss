@@ -83,12 +83,6 @@
     font-size: 20px;
 }
 
-.project-title {
-    @extend .bold;
-    display: block;
-    margin-bottom: 10px;
-}
-
 .italic {
     font-style: italic;
 }
@@ -199,9 +193,6 @@ html, body {
                 }
                 50% {
                     transform: scale(1.4,1.4);
-                }
-                100% {
-                    transform: scale(1,1);
                 }
             }
         }
@@ -443,18 +434,6 @@ html, body {
                 display: none;
             }
         }
-
-        .skills {
-            margin-top: 30px;
-
-            span {
-                font-size: 14px;
-                border: 1px solid;
-                border-radius: 3px;
-                padding: 3px;
-                margin: 0 1em 0.5em 0;
-            }
-        }
     }
 
     #work {
@@ -468,6 +447,7 @@ html, body {
 
         .content {
             width: 100%;
+            display: flex;
 
             @media (max-width: 656px) {
                 width: 80%;
@@ -475,20 +455,24 @@ html, body {
         }
 
         .swiper-pagination {
-            height: 20px;
-            position: relative;
-            bottom: -12px;
+            display: none;
         }
 
         .portfolio-box {
-            width: 25%;
-            height: 570px;
+            width: 28%;
             margin: 20px;
             border-radius: 5px;
-            display: inline-block;
 
             @include themed() {
                 background: t('background');
+            }
+
+            @media (max-width: 1024px) {
+                width: 33%;
+            }
+
+            @media (max-width: 824px) {
+                width: 50%;
             }
 
             @media (max-width: 656px) {
@@ -496,13 +480,29 @@ html, body {
                 margin: 20px 0;
             }
 
+            .project-content {
+                padding: 25px 25px 0 25px;
+
+                .project-title {
+                    @extend .bold;
+                    display: block;
+                }
+
+                .project-link {
+                    position: relative;
+                    left: 10px;
+                    cursor: pointer;
+                    color: #1682FB;
+                }
+            }
+
             img {
                 width: 100%;
                 height: auto;
             }
 
-            p {
-                padding: 0 25px;
+            > div {
+                position: relative;
             }
         }
     }
@@ -570,6 +570,18 @@ html, body {
 	&:checked + .switch-btn:after {
 		left: 50%;
 	}
+}
+
+.skills {
+    margin-top: 30px;
+
+    span {
+        font-size: 14px;
+        border: 1px solid;
+        border-radius: 3px;
+        padding: 3px;
+        margin: 0 1em 0.5em 0;
+    }
 }
 
 .switch-toggle {

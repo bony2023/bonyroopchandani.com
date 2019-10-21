@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react"
 import ReactDOM from "react-dom"
 
-import { ConsoleContext } from "../context/ConsoleContext"
+import { ConsoleContext } from "../contexts/ConsoleContext"
 
 export default function AboutConsole(props) {
     const [consoleData, setConsoleData] = useContext(ConsoleContext)
@@ -160,9 +160,9 @@ export default function AboutConsole(props) {
                 return (
                     <span key={-1}>
                         <br/><span>Available commands:</span><br/>
-                        <span style={{ marginLeft: "20px" }}>bony.about -- shows more information about the person</span><br/>
-                        <span style={{ marginLeft: "20px" }}>bony.resume -- link to the resume</span><br/>
-                        <span style={{ marginLeft: "20px" }}>bony.experience -- total number of working experience</span><br/>
+                        <span style={{ marginLeft: "20px" }}>bony.about -- know more about me</span><br/>
+                        <span style={{ marginLeft: "20px" }}>bony.resume -- want to have a look at my resume?</span><br/>
+                        <span style={{ marginLeft: "20px" }}>bony.experience -- total years of working experience</span><br/>
                         <span style={{ marginLeft: "20px" }}>clear -- clears the console</span>
                     </span>
                 )

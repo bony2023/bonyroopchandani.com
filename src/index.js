@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import ContextProvider from "./context"
+import ContextProvider from "./contexts"
 
 import {main} from "../sass/main.scss"
 import {favicon} from "../public/images/icon.ico"

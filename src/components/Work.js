@@ -1,11 +1,12 @@
 import React from "react"
 
 import Swiper from 'react-id-swiper'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 
 import yazlo from "../../public/images/yazlo.svg"
 import tutoschedule from "../../public/images/tutoschedule.svg"
 import chatio from "../../public/images/chatio.svg"
-import ibackup from "../../public/images/ibackup.svg"
 import bettinza from "../../public/images/bettinza.svg"
 import git from "../../public/images/git.svg"
 
@@ -15,10 +16,13 @@ export default function Work(props) {
         return (
             <div key={index} className="portfolio-box">
                 <a target="_blank" href={work.link}><img src={work.banner}/></a>
-                <p>
-                    <span className="project-title lg-text">{work.title}</span>
-                    <span>{work.description}</span>
-                </p>
+                <div className="project-content">
+                    <span className="project-title lg-text">
+                        {work.title}
+                        <a target="_blank" href={work.link}><FontAwesomeIcon className="project-link" icon={faExternalLinkAlt}/></a>
+                    </span>
+                    <p className="project-description">{work.description}</p>
+                </div>
             </div>
         )
     })
@@ -57,15 +61,9 @@ Work.defaultProps = {
         link: "http://flasksocketiochat.herokuapp.com/",
         description: "A chatting web application developed on Flask and SocketIO provides group and anonymous chat."
     }, {
-        title: "iBackup",
-        banner: ibackup,
-        link: "http://ibackup.herokuapp.com/",
-        description: "A small and simple application that backups Instagram’s data of a user by accessing Instagram’s REST API."
-    }, {
         title: "More on Git",
         banner: git,
-        link: "https://github.com/bony2023/",
-        description: ""
+        link: "https://github.com/bony2023/"
     }],
     swiperParams: {
         grabCursor: true,
