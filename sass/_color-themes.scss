@@ -1,14 +1,12 @@
 $themes: (
     default: (
         background: $light-theme-bg,
-        about-console-background: $console-theme-bg-color,
         experience-background: $experience-theme-bg-color,
         work-background: $work-theme-bg-color,
         color: $light-theme-color,
     ),
     dark: (
         background: $dark-theme-bg,
-        about-console-background: $console-theme-bg-color-dark,
         experience-background: $experience-theme-bg-color-dark,
         work-background: $work-theme-bg-color-dark,
         color: $dark-theme-color,

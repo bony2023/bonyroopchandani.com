@@ -1,13 +1,13 @@
 import React from "react"
 import { ThemeContextProvider } from "./ThemeContext"
-import { ConsoleContextProvider } from "./ConsoleContext"
+import { TerminalContextProvider } from "react-terminal"
 
 export default function ContextProvider(props) {
     return (
         <ThemeContextProvider>
-            <ConsoleContextProvider>
+            <TerminalContextProvider>
                 {props.children}
-            </ConsoleContextProvider>
+            </TerminalContextProvider>
         </ThemeContextProvider>
     )
 }
