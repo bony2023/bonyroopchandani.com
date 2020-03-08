@@ -4,6 +4,7 @@ import Swiper from 'react-id-swiper'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 
+import reactTerminal from "../../public/images/react-terminal.jpg"
 import yazlo from "../../public/images/yazlo.svg"
 import tutoschedule from "../../public/images/tutoschedule.svg"
 import chatio from "../../public/images/chatio.svg"
@@ -45,6 +46,11 @@ Work.defaultProps = {
         banner: yazlo,
         link: "https://yazlo.herokuapp.com/",
         description: "A Database Storage Platform for managing/accessing databases through REST API, developed in Django."
+    }, {
+        title: "React Terminal",
+        banner: reactTerminal,
+        link: "https://www.npmjs.com/package/react-terminal/",
+        description: "🚀 React component that renders a static Terminal 🖥"
     }, {
         title: "Bettinza",
         banner: bettinza,

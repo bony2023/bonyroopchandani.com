@@ -36,7 +36,7 @@ module.exports = {
                 }
             }
         }, {
-            test: /\.(svg|png)$/,
+            test: /\.(svg|png|jpg)$/,
             loader: 'url-loader?limit=100000'
         }]
     },
