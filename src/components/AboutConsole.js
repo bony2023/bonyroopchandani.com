@@ -14,8 +14,7 @@ export default function AboutConsole(props) {
                 <span>Available commands:</span><br/>
                 <span style={{ marginLeft: "20px" }}>bony.about -- know more about me</span><br/>
                 <span style={{ marginLeft: "20px" }}>bony.resume -- want to have a look at my resume?</span><br/>
-                <span style={{ marginLeft: "20px" }}>bony.experience -- total years of working experience</span><br/>
-                <span style={{ marginLeft: "20px" }}>clear -- clears the console</span>
+                <span style={{ marginLeft: "20px" }}>bony.experience -- total years of working experience</span>
             </span>
         ),
 
