@@ -27,7 +27,7 @@ export default function Experience(props) {
                 <div className="exp-work">
                     {experience.work}
                 </div>
-                <div className="skills">
+                <div style={{ marginTop: "30px" }} className="skills">
                     {skills}
                 </div>
             </div>

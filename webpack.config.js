@@ -28,7 +28,7 @@ module.exports = {
                 "sass-loader"
             ]
         }, {
-            test: /\.(ico|pdf)$/,
+            test: /\.(ico|pdf|woff2?|ttf|otf|eot)$/,
             use: {
                 loader: 'file-loader',
                 options: {
