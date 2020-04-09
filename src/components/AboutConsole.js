@@ -1,7 +1,12 @@
-import React from "react"
+import React, { useContext } from "react"
+import { ThemeContext } from "../contexts/ThemeContext"
+
 import { ReactTerminal } from "react-terminal"
 
+
 export default function AboutConsole(props) {
+    const theme = useContext(ThemeContext)
+
     const welcomeMessage = (
         <span>
             Type "help(bony)" for more information. <br />
@@ -41,7 +46,7 @@ export default function AboutConsole(props) {
     return (
         <div className="console">
             <ReactTerminal
-                theme="dark"
+                theme={theme == "dark" ? "dark" : "light"}
                 welcomeMessage={welcomeMessage}
                 commands={commands}
             />
