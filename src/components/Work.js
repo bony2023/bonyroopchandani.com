@@ -35,6 +35,8 @@ export default function Work(props) {
         key={linkName}
         index={linkName}
         target="_blank"
+        rel="noreferrer"
+        aria-label={projectDetails.title}
         href={projectDetails.links[linkName]}>
           <FontAwesomeIcon className="project-link-icon" icon={props.iconMapping[linkName]}/>
       </a>
@@ -51,7 +53,7 @@ export default function Work(props) {
           </ul>
         </div>
         <div className="project-details">
-          <p className="project-logo"><img src={projectDetails.logo}/></p>
+          <p className="project-logo"><img alt={projectDetails.title} src={projectDetails.logo}/></p>
           <span className="bold lg-text project-title-desc">{projectDetails.title}</span>
           <p className="project-description">{projectDetails.description}</p>
           <p className="project-links">{projectLinks}</p>

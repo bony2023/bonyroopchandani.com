@@ -6,14 +6,14 @@ export default function Header(props) {
     let navigation = props.navItems.map((navItem, index) => {
         return (
             <li key={index}>
-                <a {...navItem}>{navItem.label}</a>
+                <a {...navItem} aria-label={navItem.label}>{navItem.label}</a>
             </li>
         )
     })
     return (
         <header>
             <div className="nav-index">
-                <a href="/"></a>
+                <a href="/" aria-label="Home"></a>
             </div>
             <ul>
                 {navigation}
@@ -32,10 +32,12 @@ Header.defaultProps = {
     }, {
         label: "Blog",
         href: "https://medium.com/@bonyroopchandani",
-        target: "_blank"
+        target: "_blank",
+        rel: "noreferrer"
     }, {
         label: "Resume",
         href: "public/static/resume.pdf",
-        target: "_blank"
+        target: "_blank",
+        rel: "noreferrer"
     }]
 }

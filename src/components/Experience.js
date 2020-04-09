@@ -15,7 +15,7 @@ export default function Experience(props) {
             <div key={index}>
                 <div className="exp-head">
                     <div>
-                        <a target="_blank" href={experience.website}><img src={experience.logo}/></a>
+                        <a target="_blank" rel="noreferrer" aria-label={experience.companyName} href={experience.website}><img alt={experience.companyName} src={experience.logo}/></a>
                         <span className="bold lg-text">{experience.companyName}</span>
                         <span style={{float: "right"}} className="exp-det italic">{experience.duration}</span>
                     </div>

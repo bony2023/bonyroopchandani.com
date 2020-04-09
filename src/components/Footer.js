@@ -5,7 +5,13 @@ export default function Footer(props) {
     let contactLinks = props.contactLinks.map((contactLink, index) => {
         return (
             <li key={index}>
-                <a target="_blank" href={contactLink.link}>{contactLink.label}</a>
+                <a
+                target="_blank"
+                aria-label={contactLink.label}
+                rel="noreferrer"
+                href={contactLink.link}>
+                    {contactLink.label}
+                </a>
             </li>
         )
     })

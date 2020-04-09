@@ -28,7 +28,7 @@ export default function AboutConsole(props) {
 
         "bony.resume": (
             <span>
-                <a target="_blank" href="public/static/resume.pdf">resume.pdf</a>
+                <a target="_blank" aria-label="Resume" rel="noreferrer" href="public/static/resume.pdf">resume.pdf</a>
             </span>
         ),
 
