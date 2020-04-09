@@ -1,15 +1,10 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 const htmlPlugin = new HtmlWebPackPlugin({
     template: "./public/index.html",
     filename: "./index.html"
-});
-
-const extractPlugin = new MiniCssExtractPlugin({
-    filename: 'style.css'
 });
 
 module.exports = {
@@ -23,7 +18,13 @@ module.exports = {
         }, {
             test: /\.scss$/,
             use: [
-                MiniCssExtractPlugin.loader,
+                {
+                    loader: 'style-loader',
+                    options: { 
+                        insert: 'head',
+                        injectType: 'singletonStyleTag'
+                    },
+                },
                 "css-loader",
                 "sass-loader"
             ]
@@ -40,7 +41,7 @@ module.exports = {
             loader: 'url-loader?limit=100000'
         }]
     },
-    plugins: [htmlPlugin, extractPlugin],
+    plugins: [htmlPlugin],
     optimization: {
         minimizer: [
             new OptimizeCSSAssetsPlugin({}),
