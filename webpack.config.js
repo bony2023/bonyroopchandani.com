@@ -1,13 +1,12 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const HtmlWebPackPlugin = require("html-webpack-plugin")
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin")
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const WorkboxPlugin = require('workbox-webpack-plugin')
 
-const htmlPlugin = new HtmlWebPackPlugin({
-    template: "./public/index.html",
-    filename: "./index.html"
-});
+const mode = process.env.WEBPACK_MODE
 
 module.exports = {
+    mode: 'development',
     module: {
         rules: [{
             test: /\.js$/,
@@ -29,7 +28,7 @@ module.exports = {
                 "sass-loader"
             ]
         }, {
-            test: /\.(ico|woff2?|ttf|otf|eot)$/,
+            test: /\.(woff2?|ttf|otf|eot)$/,
             use: {
                 loader: 'file-loader',
                 options: {
@@ -37,7 +36,7 @@ module.exports = {
                 }
             }
         }, {
-            test: /\.(pdf)$/,
+            test: /\.(pdf|ico)$/,
             use: {
                 loader: 'file-loader',
                 options: {
@@ -53,9 +52,18 @@ module.exports = {
         }]
     },
     output: {
-        filename: '[name].[contenthash].js',
+        filename: mode === 'production' ? '[name].[contenthash].js' : '[name].[hash].js',
     },
-    plugins: [htmlPlugin],
+    plugins: [
+        new HtmlWebPackPlugin({
+            template: "./public/index.html",
+            filename: "./index.html"
+        }),
+        new WorkboxPlugin.GenerateSW({
+            clientsClaim: true,
+            skipWaiting: true,
+        }),
+    ],
     optimization: {
         minimizer: [
             new OptimizeCSSAssetsPlugin({}),
@@ -72,4 +80,4 @@ module.exports = {
         host: "0.0.0.0",
         port: 8080
     }
-};
+}

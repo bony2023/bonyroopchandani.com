@@ -4,8 +4,8 @@
   "description": "Personal website of Bony Roopchandani",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --hot",
-    "build": "webpack --mode production"
+    "start": "webpack-dev-server --mode=development --hot",
+    "build": "webpack --mode=production"
   },
   "author": "Bony Roopchandani",
   "license": "ISC",
@@ -24,7 +24,8 @@
     "url-loader": "^1.1.1",
     "webpack": "^4.17.1",
     "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.7"
+    "webpack-dev-server": "^3.1.7",
+    "workbox-webpack-plugin": "^5.1.2"
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0",

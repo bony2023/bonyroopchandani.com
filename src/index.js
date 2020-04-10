@@ -8,6 +8,7 @@ import { favicon } from "../public/images/icon.ico"
 import { resume } from "../public/static/resume.pdf"
 
 import MainApp from "./components/MainApp"
+import * as serviceWorker from "./serviceWorker"
 
 const rootElement = document.getElementById('root')
 
@@ -21,3 +22,4 @@ const renderApp = Component => {
 };
 
 renderApp(MainApp)
+serviceWorker.register()
