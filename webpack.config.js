@@ -29,7 +29,15 @@ module.exports = {
                 "sass-loader"
             ]
         }, {
-            test: /\.(ico|pdf|woff2?|ttf|otf|eot)$/,
+            test: /\.(ico|woff2?|ttf|otf|eot)$/,
+            use: {
+                loader: 'file-loader',
+                options: {
+                    name: '[path][name].[contenthash].[ext]'
+                }
+            }
+        }, {
+            test: /\.(pdf)$/,
             use: {
                 loader: 'file-loader',
                 options: {
@@ -38,8 +46,14 @@ module.exports = {
             }
         }, {
             test: /\.(svg|png|jpg)$/,
-            loader: 'url-loader?limit=100000'
+            loader: 'url-loader?limit=100000',
+            options: {
+                name: '[path][name].[contenthash].[ext]'
+            }
         }]
+    },
+    output: {
+        filename: '[name].[contenthash].js',
     },
     plugins: [htmlPlugin],
     optimization: {
