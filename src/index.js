@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom'
 
 import ContextProvider from "./contexts"
 
-import {main} from "../sass/main.scss"
-import {favicon} from "../public/images/icon.ico"
-import {resume} from "../public/static/resume.pdf"
+import { main } from "../sass/main.scss"
+import { favicon } from "../public/images/icon.ico"
+import { resume } from "../public/static/resume.pdf"
 
 import MainApp from "./components/MainApp"
 
