@@ -8,7 +8,7 @@ import Footer from "./Footer"
 
 
 export default function MainApp(props) {
-  const theme = useContext(ThemeContext)
+  const { theme } = useContext(ThemeContext)
 
   return (
     <div id="theme-container" className={`theme--${theme}`}>

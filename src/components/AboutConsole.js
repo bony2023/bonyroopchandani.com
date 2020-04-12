@@ -5,7 +5,7 @@ import { ReactTerminal } from "react-terminal"
 
 
 export default function AboutConsole(props) {
-    const theme = useContext(ThemeContext)
+    const { theme, setTheme } = useContext(ThemeContext)
 
     const welcomeMessage = (
         <span>
@@ -16,10 +16,17 @@ export default function AboutConsole(props) {
     const commands = {
         "help(bony)": (
             <span>
-                <span>Available commands:</span><br/>
-                <span style={{ marginLeft: "20px" }}>bony.about -- know more about me</span><br/>
-                <span style={{ marginLeft: "20px" }}>bony.resume -- want to have a look at my resume?</span><br/>
-                <span style={{ marginLeft: "20px" }}>bony.experience -- total years of working experience</span>
+                <span>Help on module bony:</span><br/><br/>
+
+                <span>VARIABLES</span><br/>
+                <span style={{ marginLeft: "20px" }}><strong>bony.about</strong> -- know more about me</span><br/>
+                <span style={{ marginLeft: "20px" }}><strong>bony.resume</strong> -- want to have a look at my resume?</span><br/><br/>
+
+                <span>FUNCTIONS</span><br/>
+                <span style={{ marginLeft: "20px" }}><strong>bony.experience()</strong> -> float</span><br/>
+                <span style={{ marginLeft: "40px" }}>returns the total years of working experience</span><br/>
+                <span style={{ marginLeft: "20px" }}><strong>bony.toggle_theme()</strong> -> None</span><br/>
+                <span style={{ marginLeft: "40px" }}>toggle the website's theme</span>
             </span>
         ),
 
@@ -37,10 +44,12 @@ export default function AboutConsole(props) {
             </span>
         ),
 
-        "bony.experience": () => {
+        "bony.experience()": () => {
             const experience = ((new Date() - new Date("2016-02-01")) / 1000 / 60 / 60 / 24 / 365).toFixed(1)
             return `${experience} years`
-        }
+        },
+
+        "bony.toggle_theme()": () => setTheme(theme === "dark" ? "default" : "dark")
     }
 
     return (

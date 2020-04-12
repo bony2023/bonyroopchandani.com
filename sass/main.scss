@@ -345,15 +345,15 @@ html, body {
                     &:hover {
                         cursor: pointer;
                         @include themed() {
-                            color: t('color');
+                            background: rgba(grey, 0.2);
                         }
                     }
 
                     &.active {
                         font-weight: 600;
-                        background: rgba(grey, 0.25);
                         @include themed() {
-                            color: t('color');
+                            color: t('work-active-bullet-color');
+                            background: t('work-active-bullet-background');
                         }
                     }
 

@@ -3,12 +3,16 @@ $themes: (
         background: $light-theme-bg,
         experience-background: $experience-theme-bg-color,
         work-background: $work-theme-bg-color,
+        work-active-bullet-background: $dark-bg,
+        work-active-bullet-color: $light-color,
         color: $light-theme-color,
     ),
     dark: (
         background: $dark-theme-bg,
         experience-background: $experience-theme-bg-color-dark,
         work-background: $work-theme-bg-color-dark,
+        work-active-bullet-background: $light-bg,
+        work-active-bullet-color: $dark-color,
         color: $dark-theme-color,
     )
 );
