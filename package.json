@@ -36,6 +36,6 @@
     "npm": "^6.11.3",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-terminal": "^1.0.6"
+    "react-terminal": "^1.0.9"
   }
 }
