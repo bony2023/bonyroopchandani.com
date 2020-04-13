@@ -1,0 +1,10 @@
+[build]
+  command = "yarn run build"
+  functions = "functions"
+  publish = "dist"
+
+[dev]
+  command = "./netlify-dev.sh"
+  port = 3000
+  targetPort = 8080
+  publish = "dist"
