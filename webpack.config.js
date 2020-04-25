@@ -51,6 +51,12 @@ module.exports = {
             }
         }]
     },
+    node: {
+        console: true,
+        fs: 'empty',
+        net: 'empty',
+        tls: 'empty'
+    },
     output: {
         filename: mode === 'production' ? '[name].[contenthash].js' : '[name].[hash].js',
     },

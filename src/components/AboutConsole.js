@@ -1,5 +1,7 @@
 import React, { useContext } from "react"
+import Tracks from "./Tracks";
 import { ThemeContext } from "../contexts/ThemeContext"
+import Utils from "../common/Utils"
 
 import { ReactTerminal } from "react-terminal"
 
@@ -26,7 +28,9 @@ export default function AboutConsole(props) {
                 <span style={{ marginLeft: "20px" }}><strong>bony.experience()</strong> -> float</span><br/>
                 <span style={{ marginLeft: "40px" }}>returns the total years of working experience</span><br/>
                 <span style={{ marginLeft: "20px" }}><strong>bony.toggle_theme()</strong> -> None</span><br/>
-                <span style={{ marginLeft: "40px" }}>toggle the website's theme</span>
+                <span style={{ marginLeft: "40px" }}>toggle the website's theme</span><br/>
+                <span style={{ marginLeft: "20px" }}><strong>bony.audio()</strong> -> Tracks[]</span><br/>
+                <span style={{ marginLeft: "40px" }}>check my playlist on spotify</span>
             </span>
         ),
 
@@ -49,7 +53,12 @@ export default function AboutConsole(props) {
             return `${experience} years`
         },
 
-        "bony.toggle_theme()": () => setTheme(theme === "dark" ? "default" : "dark")
+        "bony.toggle_theme()": () => setTheme(theme === "dark" ? "default" : "dark"),
+
+        "bony.audio()": async () => {
+            const playlistData = await Utils.getPlaylistData()
+            return <Tracks playlistId={playlistData.playlistId} tracks={playlistData.tracks}/>
+        }
     }
 
     return (

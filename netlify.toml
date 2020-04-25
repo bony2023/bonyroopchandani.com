@@ -5,6 +5,6 @@
 
 [dev]
   command = "./netlify-dev.sh"
-  port = 3000
+  port = 8080
   targetPort = 8080
   publish = "dist"

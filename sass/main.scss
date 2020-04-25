@@ -520,6 +520,25 @@ html, body {
     }
 }
 
+.tracks {
+    width: 100%;
+    display: inline-block;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            height: 25px;
+
+            .track-icon {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
 .switch-toggle {
 	+ .switch-btn {
 		padding: 3px;
