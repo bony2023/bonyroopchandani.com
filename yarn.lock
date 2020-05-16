@@ -7101,9 +7101,9 @@ rc@^1.0.1, rc@^1.1.6:
     strip-json-comments "~2.0.1"
 
 react-device-detect@^1.11.14:
-  version "1.12.0"
-  resolved "https://registry.yarnpkg.com/react-device-detect/-/react-device-detect-1.12.0.tgz#47eeca762e8ca576765349411ac9b4acc0570b04"
-  integrity sha512-zpIUUYqLaAT7ZT3jJ4K9xW9n+2s4VqKTyunM5u8YsWITA/VlnMBjiz+dcjOFBJrhMnuTQXWtIjFjSTTcFh3s4A==
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/react-device-detect/-/react-device-detect-1.12.1.tgz#0a2e0b02dbbceff7d619c57074a9e0ebab74bb35"
+  integrity sha512-BQ7xIEHx0VqPBGEtEFJRybHnhZ1Qn3BXX8dRR3EKLRfSTKpITUw925VYCGnygZDpmgYSq5NX0IvHGhy0w7Sckg==
   dependencies:
     ua-parser-js "^0.7.21"
 
@@ -7122,10 +7122,10 @@ react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-terminal@^1.0.10:
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/react-terminal/-/react-terminal-1.0.10.tgz#aa8a2db614693669bd55d25e30a8b404d465009e"
-  integrity sha512-4Ip969BdOS78Rbe4Kdbv+3figjAHPgP11VhQ3Lx/W/Zz7rOFoJNCnHK8+jH8syunDekYkCUXFobVf/bHOlLttA==
+react-terminal@^1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/react-terminal/-/react-terminal-1.0.11.tgz#e252fac65777fa9adacd425de04f7aa8e0945607"
+  integrity sha512-0Ht8LVYN4Ebo6lnp1jvK3L+2xbDGvoBFAk5H3WA07h5jjde72Jcvq4didU7OJJ1EogsOR7GR4/bIUukHcS4egg==
   dependencies:
     prop-types "^15.7.2"
     react-device-detect "^1.11.14"
