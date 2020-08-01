@@ -7122,10 +7122,10 @@ react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-terminal@^1.0.11:
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/react-terminal/-/react-terminal-1.0.11.tgz#e252fac65777fa9adacd425de04f7aa8e0945607"
-  integrity sha512-0Ht8LVYN4Ebo6lnp1jvK3L+2xbDGvoBFAk5H3WA07h5jjde72Jcvq4didU7OJJ1EogsOR7GR4/bIUukHcS4egg==
+react-terminal@^1.0.12:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/react-terminal/-/react-terminal-1.0.12.tgz#f3a9109b6e0c24f4a96b5d364c7ee148ece47446"
+  integrity sha512-oq+6rvKe3og6polfNuQPPeDVUrT10dmjvMJK5XxRuB4US8yFxI441IX2y1M0nvg2UjlnAWzdTbqVGxZlNUJpMQ==
   dependencies:
     prop-types "^15.7.2"
     react-device-detect "^1.11.14"
