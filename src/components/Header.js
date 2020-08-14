@@ -36,13 +36,13 @@ Header.defaultProps = {
         label: "Work",
         href: "#work"
     }, {
-        label: "Blog",
-        href: "https://medium.com/@bonyroopchandani",
+        label: "Resume",
+        href: "",  // populate dynamically
         target: "_blank",
         rel: "noreferrer"
     }, {
-        label: "Resume",
-        href: "",  // populate dynamically
+        label: "Blog",
+        href: "https://medium.com/@bonyroopchandani",
         target: "_blank",
         rel: "noreferrer"
     }]
