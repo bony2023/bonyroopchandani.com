@@ -1,6 +1,7 @@
 import React, { useContext } from "react"
 import Tracks from "./Tracks";
 import { ThemeContext } from "../contexts/ThemeContext"
+import { ResumeContext } from "../contexts/ResumeContext"
 import Utils from "../common/Utils"
 
 import { ReactTerminal } from "react-terminal"
@@ -8,6 +9,7 @@ import { ReactTerminal } from "react-terminal"
 
 export default function AboutConsole(props) {
     const { theme, setTheme } = useContext(ThemeContext)
+    const resumeUrl = useContext(ResumeContext)
 
     const welcomeMessage = (
         <span>
@@ -44,7 +46,7 @@ export default function AboutConsole(props) {
 
         "bony.resume": (
             <span>
-                <a target="_blank" aria-label="Resume" rel="noreferrer" href="public/static/resume.pdf">resume.pdf</a>
+                <a target="_blank" aria-label="Resume" rel="noreferrer" href={resumeUrl}>resume.pdf</a>
             </span>
         ),
 

@@ -1,15 +1,21 @@
-import React from "react"
-import Switch from "./Switch"
+import React, { useContext } from "react"
+import { ResumeContext } from "../contexts/ResumeContext"
 
 
 export default function Header(props) {
-    let navigation = props.navItems.map((navItem, index) => {
+    const resumeUrl = useContext(ResumeContext)
+    const navigation = props.navItems.map((navItem, index) => {
+        if (navItem.label === "Resume") {
+            navItem.href = resumeUrl
+        }
+
         return (
             <li key={index}>
                 <a {...navItem} aria-label={navItem.label}>{navItem.label}</a>
             </li>
         )
     })
+
     return (
         <header>
             <div className="nav-index">
@@ -36,7 +42,7 @@ Header.defaultProps = {
         rel: "noreferrer"
     }, {
         label: "Resume",
-        href: "public/static/resume.pdf",
+        href: "",  // populate dynamically
         target: "_blank",
         rel: "noreferrer"
     }]
