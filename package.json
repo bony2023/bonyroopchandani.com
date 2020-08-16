@@ -38,7 +38,7 @@
     "@sentry/react": "^5.21.1",
     "json-loader": "^0.5.7",
     "netlify-lambda": "^1.6.3",
-    "npm": "^6.11.3",
+    "npm": "^6.14.6",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-terminal": "^1.1.0",
