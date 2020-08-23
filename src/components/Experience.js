@@ -17,11 +17,11 @@ export default function Experience(props) {
                     <div>
                         <a target="_blank" rel="noreferrer" aria-label={experience.companyName} href={experience.website}><img alt={experience.companyName} src={experience.logo}/></a>
                         <span className="bold lg-text">{experience.companyName}</span>
-                        <span style={{float: "right"}} className="exp-det italic">{experience.duration}</span>
+                        <span style={{float: "right"}} className="exp-det">{experience.duration}</span>
                     </div>
                     <div>
                         <span className="bold">{experience.position}</span>
-                        <span style={{float: "right"}} className="exp-det italic">{experience.location}</span>
+                        <span style={{float: "right"}} className="exp-det">{experience.location}</span>
                     </div>
                 </div>
                 <div className="exp-work">
