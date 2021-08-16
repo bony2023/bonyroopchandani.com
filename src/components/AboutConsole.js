@@ -66,7 +66,7 @@ export default function AboutConsole(props) {
     return (
         <div className="console">
             <ReactTerminal
-                theme={theme == "dark" ? "dracula" : "light"}
+                theme={theme == "dark" ? "material-dark" : "light"}
                 welcomeMessage={welcomeMessage}
                 commands={commands}
             />
