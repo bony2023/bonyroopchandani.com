@@ -5978,12 +5978,12 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-device-detect@^1.17.0:
-  version "1.17.0"
-  resolved "https://registry.yarnpkg.com/react-device-detect/-/react-device-detect-1.17.0.tgz#a00b4fd6880cebfab3fd8a42a79dc0290cdddca9"
-  integrity sha512-bBblIStwpHmoS281JFIVqeimcN3LhpoP5YKDWzxQdBIUP8S2xPvHDgizLDhUq2ScguLfVPmwfF5y268EEQR60w==
+react-device-detect@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/react-device-detect/-/react-device-detect-2.2.2.tgz#dbabbce798ec359c83f574c3edb24cf1cca641a5"
+  integrity sha512-zSN1gIAztUekp5qUT/ybHwQ9fmOqVT1psxpSlTn1pe0CO+fnJHKRLOWWac5nKxOxvOpD/w84hk1I+EydrJp7SA==
   dependencies:
-    ua-parser-js "^0.7.24"
+    ua-parser-js "^1.0.2"
 
 react-dom@^17.0.2:
   version "17.0.2"
@@ -5999,13 +5999,13 @@ react-is@^16.7.0, react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-terminal@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/react-terminal/-/react-terminal-1.2.1.tgz#e5b87cfda69b8f56d6b46a597dd6b923e3dd4a77"
-  integrity sha512-JRCSgpQby723zLvyBRqHWKDmX+0+r7fQWYOAZBGHcXR+We1IMHdObyx5ygufY2LBWLtljyrAHRD0FPPWrdb7wA==
+react-terminal@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/react-terminal/-/react-terminal-1.2.4.tgz#c0758fbca4de112999fd0ea44ef26035c8faf030"
+  integrity sha512-nWwZk7xabUCl9fuylAJ6BiZ5GvL9hFPWd2qQ8MXQmaieuBK2+S5EStjoJDDaufobxh2pf867ce2sasg7VVouqg==
   dependencies:
     prop-types "^15.7.2"
-    react-device-detect "^1.17.0"
+    react-device-detect "^2.2.2"
 
 react@^17.0.2:
   version "17.0.2"
@@ -7229,10 +7229,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-ua-parser-js@^0.7.24:
-  version "0.7.28"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
-  integrity sha512-6Gurc1n//gjp9eQNXjD9O3M/sMwVtN5S8Lv9bvOYBfKfDNiIIhqiyi01vMBO45u4zkDE420w/e0se7Vs+sIg+g==
+ua-parser-js@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-1.0.2.tgz#e2976c34dbfb30b15d2c300b2a53eac87c57a775"
+  integrity sha512-00y/AXhx0/SsnI51fTc0rLRmafiGOM4/O+ny10Ps7f+j/b8p/ZY11ytMgznXkOVo4GQ+KwQG5UQLkLGirsACRg==
 
 uglify-es@^3.3.4:
   version "3.3.9"
