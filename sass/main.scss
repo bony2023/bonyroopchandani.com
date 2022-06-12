@@ -212,6 +212,11 @@ html, body {
             margin: auto;
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
+
+            div[class*="editor"] {
+                border-bottom-left-radius: 0px !important;
+                border-bottom-right-radius: 0px !important;
+            }
         }
 
         .about-normal {

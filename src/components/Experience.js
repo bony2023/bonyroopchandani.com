@@ -1,5 +1,6 @@
 import React from "react"
 
+import shopify from "../../public/images/shopify.png"
 import hiver from "../../public/images/hiver.png"
 import datalicious from "../../public/images/datalicious.png"
 import loktra from "../../public/images/loktra.png"
@@ -46,13 +47,22 @@ export default function Experience(props) {
 
 Experience.defaultProps = {
     workExperience: [{
+        companyName: "Shopify",
+        logo: shopify,
+        website: "https://www.shopify.com/",
+        position: "Software Developer",
+        work: "Making Shopify's billing system a bit better and making sure customers using it are able to pay their bills easily.",
+        skills: ["Ruby on Rails", "MySQL", "React"],
+        duration: "March 2021 - Present",
+        location: "Ottawa, Canada"
+    }, {
         companyName: "Hiver",
         logo: hiver,
         website: "https://hiverhq.com/",
         position: "Senior Software Engineer",
         work: "Hiver has shared mailbox management over Gmail. Working on building the infrastructure on the backend as well as architecting and incorporating features.",
         skills: ["Python", "MySQL", "React"],
-        duration: "May 2019 - Present",
+        duration: "May 2019 - Feb 2021",
         location: "Bengaluru, India"
     },{
         companyName: "Datalicious",
