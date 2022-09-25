@@ -45,17 +45,21 @@ module.exports = {
             }
         }, {
             test: /\.(svg|png|jpg)$/,
-            loader: 'url-loader?limit=100000',
-            options: {
-                name: '[path][name].[contenthash].[ext]'
-            }
+            use: [
+                {
+                    loader: 'url-loader',
+                    options: {
+                        limit: 100000,
+                        name : '[path][name].[contenthash].[ext]'
+                    }
+                }
+            ]
         }]
     },
     node: {
-        console: true,
-        fs: 'empty',
-        net: 'empty',
-        tls: 'empty'
+        global: false,
+        __filename: false,
+        __dirname: false,
     },
     output: {
         filename: mode === 'production' ? '[name].[contenthash].js' : '[name].[hash].js',
@@ -64,10 +68,6 @@ module.exports = {
         new HtmlWebPackPlugin({
             template: "./public/index.html",
             filename: "./index.html"
-        }),
-        new WorkboxPlugin.GenerateSW({
-            clientsClaim: true,
-            skipWaiting: true,
         }),
     ],
     optimization: {
@@ -82,7 +82,6 @@ module.exports = {
         ]
     },
     devServer: {
-        inline: true,
         host: "0.0.0.0",
         port: 8080
     }

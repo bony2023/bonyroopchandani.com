@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client';
 
 import * as Sentry from '@sentry/react';
 
@@ -13,15 +13,14 @@ import { favicon } from "../public/images/icon.ico"
 import MainApp from "./components/MainApp"
 import * as serviceWorker from "./serviceWorker"
 
-const rootElement = document.getElementById('root')
-
 const renderApp = Component => {
   Sentry.init({dsn: Config.SENTRY_DSN});
-  ReactDOM.render(
+  const container = document.getElementById('root');
+  const root = createRoot(container);
+  root.render(
     <ContextProvider>
       <Component/>
-    </ContextProvider>,
-    rootElement
+    </ContextProvider>
   );
 };
 
