@@ -23,6 +23,7 @@ export default function Work(props) {
         className={index == projectSelectedIndex ? "active" : ""}
         onClick={() => setProjectSelectedIndex(index)}>
           <span className="project-title">{project.title}</span>
+          <span className="project-title-sm">{project.titleSmall}</span>
       </li>
     )
   })
@@ -71,6 +72,7 @@ Work.defaultProps = {
 
   projects: [{
       title: "React Terminal",
+      titleSmall: "RT",
       logo: reactTerminal,
       links: {
         app: "https://www.npmjs.com/package/react-terminal/",
@@ -81,6 +83,7 @@ Work.defaultProps = {
       skills: ["ReactJS (JavaScript)"]
   }, {
     title: "Yazlo",
+    titleSmall: "YLO",
     logo: yazlo,
     links: {
       app: "https://yazlo.herokuapp.com/",
@@ -91,6 +94,7 @@ Work.defaultProps = {
     skills: ["Django (Python)", "JavaScript", "MongoDB"]
   }, {
       title: "Bettinza",
+      titleSmall: "BZ",
       links: {
         app: "https://bettinza.herokuapp.com/",
       },
@@ -100,6 +104,7 @@ Work.defaultProps = {
       skills: ["HTML5 Canvas", "Spring (Java)", "ReactJS (JavaScript)"]
   }, {
       title: "TutoSchedule",
+      titleSmall: "TS",
       logo: tutoschedule,
       links: {
         app: "http://tutoschedule.herokuapp.com/",
@@ -109,6 +114,7 @@ Work.defaultProps = {
       skills: ["ReactJS (JavaScript)", "Ruby on Rails"]
   }, {
       title: "ChatIO",
+      titleSmall: "CIO",
       logo: chatio,
       links: {
         app: "http://flasksocketiochat.herokuapp.com/",
@@ -119,6 +125,7 @@ Work.defaultProps = {
       skills: ["Flask (Python)", "JavaScript", "SocketIO"]
   }, {
     title: "SoundCloud Downloader",
+    titleSmall: "SD",
     logo: soundcloudDownloader,
     links: {
       github: "https://github.com/bony2023/SoundCloud-Downloader/",
@@ -128,6 +135,7 @@ Work.defaultProps = {
     skills: ["Python"]
   }, {
     title: "Instagram Backup",
+    titleSmall: "IB",
     logo: ibackup,
     links: {
       app: "http://ibackup.herokuapp.com/",

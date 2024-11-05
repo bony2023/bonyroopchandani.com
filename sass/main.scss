@@ -369,6 +369,14 @@ html, body {
                         }
                     }
 
+                    .project-title-sm {
+                        margin-left: 5px;
+                        display: none;
+                        @media (max-width: 960px) {
+                            display: block;
+                        }
+                    }
+
                     .project-icon {
                         font-size: 20px;
                         position: relative;
