@@ -22,7 +22,7 @@ export default function Work(props) {
         key={index}
         className={index == projectSelectedIndex ? "active" : ""}
         onClick={() => setProjectSelectedIndex(index)}>
-          <span className={`project-icon ${project.icon}`}></span> <span className="project-title">{project.title}</span>
+          <span className="project-title">{project.title}</span>
       </li>
     )
   })
@@ -70,16 +70,6 @@ Work.defaultProps = {
   },
 
   projects: [{
-    title: "Yazlo",
-    logo: yazlo,
-    links: {
-      app: "https://yazlo.herokuapp.com/",
-      github: "https://github.com/bony2023/yazlo-api/",
-    },
-    icon: "icon-yazlo",
-    description: "A Database Storage Platform for managing/accessing databases through REST API, developed in Django.",
-    skills: ["Django (Python)", "JavaScript", "MongoDB"]
-  }, {
       title: "React Terminal",
       logo: reactTerminal,
       links: {
@@ -89,6 +79,16 @@ Work.defaultProps = {
       icon: "icon-terminal",
       description: "🚀 React component that renders a static Terminal 🖥",
       skills: ["ReactJS (JavaScript)"]
+  }, {
+    title: "Yazlo",
+    logo: yazlo,
+    links: {
+      app: "https://yazlo.herokuapp.com/",
+      github: "https://github.com/bony2023/yazlo-api/",
+    },
+    icon: "icon-yazlo",
+    description: "A Database Storage Platform for managing/accessing databases through REST API, developed in Django.",
+    skills: ["Django (Python)", "JavaScript", "MongoDB"]
   }, {
       title: "Bettinza",
       links: {
