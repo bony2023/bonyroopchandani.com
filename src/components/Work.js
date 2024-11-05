@@ -45,8 +45,8 @@ export default function Work(props) {
   })
 
   return (
-    <div id="work">
-      <div className="head">My Work</div>
+    <div id="projects">
+      <div className="head">Hobby Projects</div>
       <div className="content">
         <div className="project-name-list">
           <ul>

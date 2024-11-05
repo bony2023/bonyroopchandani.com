@@ -33,8 +33,8 @@ Header.defaultProps = {
         label: "Exp",
         href: "#experience"
     }, {
-        label: "Work",
-        href: "#work"
+        label: "Projects",
+        href: "#projects"
     }, {
         label: "Resume",
         href: "",  // populate dynamically
