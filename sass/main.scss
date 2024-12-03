@@ -269,6 +269,11 @@ html, body {
                   100% { transform: rotate(  0.0deg) }
                 }
             }
+
+            .highlight {
+                display: inline;
+                box-shadow: inset 0 -0.2em 0 rgb(255, 197, 63);
+            }
         }
     }
 

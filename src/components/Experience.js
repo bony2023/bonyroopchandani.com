@@ -50,7 +50,7 @@ Experience.defaultProps = {
         companyName: "Shopify",
         logo: shopify,
         website: "https://www.shopify.com/",
-        position: "Software Developer",
+        position: "Senior Software Engineer",
         work: "Making Shopify's billing system a bit better and making sure customers using it are able to pay their bills easily.",
         skills: ["Ruby on Rails", "MySQL", "React"],
         duration: "March 2021 - Present",

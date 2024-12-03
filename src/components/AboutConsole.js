@@ -10,6 +10,7 @@ import { ReactTerminal } from "react-terminal"
 export default function AboutConsole(props) {
     const { theme, setTheme } = useContext(ThemeContext)
     const resumeUrl = useContext(ResumeContext)
+    const experience = ((new Date() - new Date("2016-02-01")) / 1000 / 60 / 60 / 24 / 365).toFixed(1)
 
     const welcomeMessage = (
         <span>
@@ -38,7 +39,7 @@ export default function AboutConsole(props) {
 
         "bony.about": (
             <span>
-                <span>A full-stack developer by profession who loves to code and build experiences.</span><br/>
+                <span>A software engineer with {Math.floor(experience)} years of experience building scalable and impactful software applications.</span><br/>
                 <span>Completed bachelors in Computer Science and have never looked back since then.</span><br/>
                 <span>Loves automation. Occasionally <a target="_blank" href="https://medium.com/@bonyroopchandani">writes</a>.</span>
             </span>
@@ -51,7 +52,6 @@ export default function AboutConsole(props) {
         ),
 
         "bony.experience()": () => {
-            const experience = ((new Date() - new Date("2016-02-01")) / 1000 / 60 / 60 / 24 / 365).toFixed(1)
             return `${experience} years`
         },
 
